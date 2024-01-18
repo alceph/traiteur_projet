@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:google_fonts/google_fonts.dart';
 class HomeScreen extends StatelessWidget {
     const HomeScreen ({super.key});
     @override
@@ -11,10 +12,66 @@ class HomeScreen extends StatelessWidget {
                 AnimatedTextKit(
                     animatedTexts:
                     [
-                        TypewriterAnimatedText(
-                            
-                        ),
-                    ]
+                        // TypewriterAnimatedText(
+                        //     'Traiteur demo',
+                        //     textStyle: monPropreStyleText,
+                        //     speed: const Duration (milliseconds: 200),
+                        // ),
+                        // RotateAnimatedText('Traiteur Demo', textStyle: monPropreStyleText),
+                        // RotateAnimatedText('Mange', textStyle: monPropreStyleText),
+                        // RotateAnimatedText('MANGE !!', textStyle: monPropreStyleText),
+
+                        // TyperAnimatedText('Traiteur Demo', textStyle: monPropreStyleText),
+                        // TyperAnimatedText('COMANDE !!', textStyle: monPropreStyleText),
+                        // TyperAnimatedText("MANGE !!", textStyle: monPropreStyleText),
+
+                        ColorizeAnimatedText(
+                            'Bon appetito', 
+                            textStyle: GoogleFonts.anton(
+                                textStyle: monPropreStyleText
+                            ),
+                            colors: [
+                                Colors.purple,
+                                Colors.blue,
+                                Colors.yellow,
+                                Colors.red,
+                                ],
+                                ),
+
+                        ColorizeAnimatedText(
+                            'COMMANDE', 
+                            textStyle: GoogleFonts.kalam(
+                                textStyle: monPropreStyleText
+                            ), 
+                            colors: [
+                                Colors.purple,
+                                Colors.blue,
+                                Colors.yellow,
+                                Colors.red,
+                                ],
+                                ),
+
+                                ColorizeAnimatedText(
+                            'MANGE', 
+                            textStyle: const TextStyle(
+                            fontFamily: 'Horizon',
+                            fontSize: 50,
+                            ), 
+                            colors: [
+                                Colors.purple,
+                                Colors.blue,
+                                Colors.yellow,
+                                Colors.red,
+                                ],
+                                ),
+                        RotateAnimatedText('Traiteur Demo', textStyle: monPropreStyleText),
+                        RotateAnimatedText('Mange', textStyle: monPropreStyleText),
+                        RotateAnimatedText('MANGE !!', textStyle: monPropreStyleText),
+                    ],
+                    totalRepeatCount: 4,
+                    pause: const Duration(milliseconds: 1000),
+                    displayFullTextOnTap: true,
+                    stopPauseOnTap: true,
                     )
                 
                 ,
@@ -64,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                     children: <Widget>[
                         ElevatedButton(
                             style: monPropreStyleButton,
-                            onPressed:()=>{},
+                            onPressed:()=>{ print('Catalogue')},
                             child: Text('catalogue des plats',style: monPropreStyleText,),
                             ),
                             
@@ -79,7 +136,7 @@ class HomeScreen extends StatelessWidget {
 
                             ElevatedButton(
                                 style:monPropreStyleButton,
-                            onPressed:()=>{},
+                            onPressed:()=>{print('Gestion des commandes')},
                             child:  Text('Gestion des commandes',style:monPropreStyleText),
                             ),
                             
@@ -91,8 +148,8 @@ class HomeScreen extends StatelessWidget {
 
                             ElevatedButton(
                             style: monPropreStyleButton,
-                            onPressed:()=>{},
-                            child: Text('Espaces cleints', style: monPropreStyleText,),
+                            onPressed:()=>{print('Espaces clients')},
+                            child: Text('Espaces clients', style: monPropreStyleText,),
                             ),
                     ],
                 )
