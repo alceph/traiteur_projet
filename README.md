@@ -1,16 +1,48 @@
 # traiteur_projet
 
-A new Flutter project.
+Cette application Flutter permet la gestion efficace des commandes pour un service de traiteur, offrant des fonctionnalités pour les clients et les administrateurs.
 
-## Getting Started
+## Fontionnalités Principales
 
-This project is a starting point for a Flutter application.
+- **Authentification des utilisateurs**: Permet aux clients de s'inscrire et de se connecter.
+- **Catalogue de plats** : Affiche les plats disponibles aux détails.
+- **Administration** : Gestion des commandes et informations clients.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologie
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Front-end** : Développé avec Flutter.
+- **Back-end**  : Node.js pour les services d'authentification et de gestion de données.
+- **Base de données** : SQLite, avec possibilité d'extension vers une solution de base de données distante.
+
+## Structure du projet
+```
+lib/
+|---models/
+|---services/
+|---views/
+|---widgets/
+server/ (pour le code Node.js)
+```
+
+## Installation et Exécution
+
+1. **Clonage du Répertoire :**
+```
+git clone https://github.com/alceph/traiteur_projet.git
+```
+
+2. **Installation des Dépondances Flutter :**
+```
+cd your-project-directory
+flutter create .
+flutter pub get
+```
+
+3. ***Démarrage de l'Application :**
+```
+flutter
+
+
+
+## Instatllation
